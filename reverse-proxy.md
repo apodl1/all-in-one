@@ -357,6 +357,7 @@ server {
         proxy_set_header Connection $connection_upgrade;
     }
 
+    #if running nextcloud on a subdomain (eg. nextcloud.example.com) of a domain that already has a certificate, the below <your-nc-domain> should be replaced with just the domain (eg. example.com)
     ssl_certificate /etc/letsencrypt/live/<your-nc-domain>/fullchain.pem;   # managed by certbot on host machine
     ssl_certificate_key /etc/letsencrypt/live/<your-nc-domain>/privkey.pem; # managed by certbot on host machine
 
